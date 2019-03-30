@@ -8,7 +8,7 @@ var userSchema = new Schema({
   },
   name: {
     first: { required: true, type: String },
-    middle: { required: true, type: String },
+    middle: { type: String },
     last: { required: true, type: String }
   },
   subscription_type: {
