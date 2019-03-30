@@ -11,7 +11,11 @@ var userSchema = new Schema({
     middle: { required: true, type: String },
     last: { required: true, type: String }
   },
-  subscription_type: { required: true, type: String },
+  subscription_type: {
+    required: true,
+    type: Schema.Types.ObjectId,
+    ref: 'Subscription'
+  },
   meals: [
     {
       attended: { required: true, type: Boolean },
