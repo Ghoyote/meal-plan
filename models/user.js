@@ -18,8 +18,8 @@ var userSchema = new Schema({
   },
   meals: [
     {
-      attended: { required: true, type: Boolean },
-      ate: { required: true, type: Boolean },
+      attended: { type: Boolean },
+      ate: { type: Boolean },
       transaction: { type: Schema.Types.ObjectId, ref: 'Transaction' }
     }
   ],
