@@ -12,10 +12,13 @@ var userSchema = new Schema({
     last: { required: true, type: String }
   },
   subscription_type: { required: true, type: String },
-  meals: {
-    attended: { required: true, type: Boolean },
-    ate: { required: true, type: Boolean },
-    transaction: {}
-  }
+  meals: [
+    {
+      attended: { required: true, type: Boolean },
+      ate: { required: true, type: Boolean },
+      transaction: { type: Schema.Types.ObjectId, ref: 'Transaction' }
+    }
+  ],
+  pref: { dislikes: [{ type: Schema.Types.ObjectId, ref: 'Ingredient' }] }
 });
 module.exports = mongoose.model('User', userSchema);
