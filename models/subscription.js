@@ -5,6 +5,12 @@ var subscriptionSchema = new Schema({
   meal: Number,
   snack: Number,
   amount: Number,
-  numberOfMeals: Number
+  numberOfMeals: Number,
+  users: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'User'
+    }
+  ]
 });
 module.exports = mongoose.model('Subscription', subscriptionSchema);
