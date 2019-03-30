@@ -11,7 +11,13 @@ var mealSchema = new Schema({
       type: Schema.Types.ObjectId,
       ref: 'Ingredient'
     }
+  ],
+  extras: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Ingredient'
+    }
   ]
 });
 
-module.exports = mongoose.model('meal', mealSchema);
+module.exports = mongoose.model('Meal', mealSchema);
