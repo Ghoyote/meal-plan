@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var subscriptionSchema = new Schema({
   id: String,
+  name: String,
   meal: Number,
   snack: Number,
   amount: Number,
